@@ -7,27 +7,10 @@ body {
 }
 
 .banner {
-    background-image: url('images/Godiva1920.png');
+    background-image: url('images/GODIVA1920.png');
     background-size: cover;
     background-position: center;
-    color: white;
-    text-align: center;
     height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
-}
-
-.banner h1 {
-    font-family: Georgia, serif;
-    font-size: 4em;
-    margin: 0;
-}
-
-.banner p {
-    font-size: 1.5em;
 }
 
 main {
@@ -62,6 +45,21 @@ section {
     border-bottom: 1px solid #F0EBE0;
 }
 
+.full-width-module {
+    padding: 0 50px;
+}
+
+.full-width-module .image-container {
+    flex-basis: 100%;
+}
+
+.full-width-module img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+}
+
 .module:last-child {
     border-bottom: none;
 }
@@ -73,6 +71,19 @@ section {
 .module .text {
     flex: 1;
     text-align: center;
+}
+
+.module .text h1 {
+    font-family: Georgia, serif;
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #5C3A21;
+}
+
+.module .text > p:first-of-type {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    font-style: italic;
 }
 
 .module .image-container {
@@ -116,4 +127,41 @@ section {
 .cta-button:hover {
     background-color: #C9981D;
     transform: translateY(-2px);
+}
+
+/* --- Mobile Styles --- */
+@media (max-width: 768px) {
+    .banner {
+        height: 40vh;
+    }
+
+    .module, .module:nth-child(even) {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .full-width-module {
+        padding: 0 20px;
+    }
+
+    .module .text {
+        order: 2;
+        padding-top: 20px;
+    }
+
+    .module .image-container {
+        order: 1;
+    }
+
+    .module .text h1 {
+        font-size: 2.5em;
+    }
+
+    .module .text > p:first-of-type {
+        font-size: 1.2em;
+    }
+
+    .module h2 {
+        font-size: 1.8em;
+    }
 }
