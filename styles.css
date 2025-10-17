@@ -10,6 +10,7 @@ body {
     width: 100%;
     height: 70vh;
     overflow: hidden;
+    position: relative;
 }
 
 .banner-image {
@@ -17,6 +18,9 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 main {
@@ -138,7 +142,12 @@ section {
 /* --- Mobile Styles --- */
 @media (max-width: 768px) {
     .banner {
-        height: 40vh;
+        height: 50vh;
+        min-height: 250px;
+    }
+
+    .banner-image {
+        object-position: center center;
     }
 
     .module:first-child .image-container {
